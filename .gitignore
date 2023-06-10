@@ -1,0 +1,9 @@
+# env
+.env*
+
+# cache/packages
+__pycache__
+node_modules
+
+# dev directories/setup
+*.egg-info
