@@ -19,6 +19,8 @@ def gen_character_io(character_description: str) -> dict:
             - guidance
             - completion
             - token healing
+        prompts:
+            - << gen_character_io_prompt >>
     ---
     '''
     
@@ -35,13 +37,13 @@ def gen_character_io(character_description: str) -> dict:
         }
         ```'''
     ])
-    '''
+    """
     ---
     ModelBusinessPrompt:
         name: gen_character_io_prompt
         prompt: |
             The following is a fictional character ({character_description}) in JSON format.
-            ```json
+            '''json
             {
                 "name": "{{gen 'name' }}",
                 "morale_alignment": "{{select 'order' options=alignment_options}}",
@@ -49,9 +51,9 @@ def gen_character_io(character_description: str) -> dict:
                 "deepest_secret": {{gen 'secret_motive' }},
                 "inventory_list": {{gen 'inventory_list' }}
             }
-            ```
+            '''
     ---
-    '''
+    """
     llm = guidance.llms.OpenAI("text-davinci-003", token=os.environ.get('OPEN_AI_API_KEY'), caching=False)
     # --- execute (w/ args)
     program = guidance(gen_character_io_prompt, llm=llm)

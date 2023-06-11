@@ -8,11 +8,17 @@ Description: Generate a fictional character details in JSON format.
 
 Tags: guidance, completion, token healing
 
+Prompts:
+- << gen_character_io_prompt >>
+
 ### gen_outline_cot
 
 Description: Generate a story outline in the writing style of 3 relevant famous writers.
 
 Tags: guidance, chat
+
+Prompts:
+- << gen_outline_cot_prompt >>
 
 
 ---
@@ -30,7 +36,7 @@ Tags: guidance, chat
 
 ```
 The following is a fictional character ({character_description}) in JSON format.
-```json
+'''json
 {
     "name": "{{gen 'name' }}",
     "morale_alignment": "{{select 'order' options=alignment_options}}",
@@ -38,7 +44,7 @@ The following is a fictional character ({character_description}) in JSON format.
     "deepest_secret": {{gen 'secret_motive' }},
     "inventory_list": {{gen 'inventory_list' }}
 }
-```
+'''
 ```
 
 ### gen_outline_cot_prompt

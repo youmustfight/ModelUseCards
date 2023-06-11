@@ -17,6 +17,8 @@ def gen_outline_cot(story_prompt: str) -> dict:
         tags:
             - guidance
             - chat
+        prompts:
+            - << gen_outline_cot_prompt >>
     ---
     '''
     
