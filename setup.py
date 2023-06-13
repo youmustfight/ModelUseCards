@@ -9,5 +9,6 @@ setup(
     package_dir={ '': 'src' }, # This tells setuptools to look for packages in the 'src' directory.
     packages=find_packages(where='src'), # find_packages() will find packages in the 'src' directory because of the above.
     install_requires=[],
+    license='MIT',
     zip_safe=False
 )
