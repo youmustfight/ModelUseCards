@@ -1,5 +1,11 @@
 # 📇 Model Business (Logic) Cards 📇
 
+![](http://img.shields.io/pypi/v/modelbusinesscards.svg?style=flat-square)
+![](http://img.shields.io/pypi/l/modelbusinesscards.svg?style=flat-square)
+
+---
+
+
 > Inspired by "[Model Cards for Model Reporting](https://arxiv.org/abs/1810.03993)" and the continued work of some of its authors [Timnit Gebru](https://twitter.com/timnitGebru) and [Margaret Mitchell](https://twitter.com/mmitchell_ai). Also inspired by my personal experiences building [Gideon](https://github.com/youmustfight/gideon), a AI-first tool for public defenders, and the hallucinations that could impact legal workers.
 
 Model Business Cards is a proof of concept, and Python package for generating documentation about the use of generative AI models focused on LLMs. As the AI community has pushed for better transparency about the biases and behaviors of models through the publishing of "Model Cards", we now have to push one step further into implementation decisions. 
